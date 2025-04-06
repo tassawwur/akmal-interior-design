@@ -1,0 +1,16 @@
+# https://www.robotstxt.org/robotstxt.html
+# Akmal - Pakistan's Elite Interior Design Atelier
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Disallow certain areas to protect user privacy and admin areas
+Disallow: /admin/*
+Disallow: /api/*
+Disallow: /private/*
+
+# Set crawl delay to ensure good performance
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://akmal.com/sitemap.xml
