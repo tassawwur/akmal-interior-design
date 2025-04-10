@@ -89,20 +89,20 @@ const HeroSection = () => {
             </Link>
           </ButtonGroup>
           
-          <TrustIndicators>
-            <TrustItem>
+          <TrustSignals>
+            <span className="trust-text">
               <TrustIcon className="fas fa-award" aria-hidden="true" />
-              <span>Award-Winning Design</span>
-            </TrustItem>
-            <TrustItem>
+              Award-Winning Design
+            </span>
+            <span className="trust-text">
               <TrustIcon className="fas fa-gem" aria-hidden="true" />
-              <span>Luxury Expertise</span>
-            </TrustItem>
-            <TrustItem>
+              Luxury Expertise
+            </span>
+            <span className="trust-text">
               <TrustIcon className="fas fa-certificate" aria-hidden="true" />
-              <span>Exclusive Service</span>
-            </TrustItem>
-          </TrustIndicators>
+              Exclusive Service
+            </span>
+          </TrustSignals>
         </motion.div>
       </HeroContent>
       
@@ -243,28 +243,22 @@ const TaglineSeparator = styled.span`
 `;
 
 const HeroTitle = styled.h1`
-  font-size: calc(2rem * var(--heading-scale));
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-dark);
+  line-height: 1.15;
   
   @media (min-width: 576px) {
-    font-size: calc(2.5rem * var(--heading-scale));
-    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
   }
   
   @media (min-width: 768px) {
-    font-size: calc(3rem * var(--heading-scale));
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+    font-size: 2.75rem;
   }
   
   @media (min-width: 992px) {
-    font-size: calc(3.5rem * var(--heading-scale));
-  }
-  
-  @media (min-width: 1200px) {
-    font-size: calc(4.5rem * var(--heading-scale));
+    font-size: 3.25rem;
   }
 `;
 
@@ -280,52 +274,39 @@ const TitleBreak = styled.br`
 `;
 
 const HeroDescription = styled.p`
-  font-size: 1rem;
-  width: 100%;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: var(--color-text);
+  font-size: 0.95rem;
+  color: var(--color-text-medium);
+  margin-bottom: 1.25rem;
+  max-width: 600px;
+  line-height: 1.5;
   
   @media (min-width: 768px) {
-    font-size: 1.1rem;
-    margin-bottom: 2.25rem;
-    line-height: 1.7;
+    font-size: 1rem;
   }
   
   @media (min-width: 992px) {
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
+    font-size: 1.1rem;
   }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  width: 100%;
-  
-  a {
-    width: 100%;
-  }
-  
-  @media (min-width: 576px) {
-    flex-direction: row;
-    gap: 1.25rem;
-    
-    a {
-      width: auto;
-    }
-  }
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
   
   @media (min-width: 768px) {
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 1rem;
   }
   
-  @media (min-width: 992px) {
-    margin-bottom: 3.5rem;
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    
+    &:hover {
+      background-color: var(--color-primary-light);
+    }
   }
 `;
 
@@ -400,41 +381,30 @@ const HeroImage = styled.img`
   object-position: center; /* Adjust as needed, e.g., 'top center' */
 `;
 
-const TrustIndicators = styled.div`
+const TrustSignals = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
+  gap: 0.5rem;
   margin-top: 0.5rem;
   
-  @media (min-width: 576px) {
-    gap: 1.75rem;
-  }
-  
-  @media (min-width: 992px) {
-    gap: 2rem;
+  @media (min-width: 768px) {
     margin-top: 0.75rem;
   }
-`;
-
-const TrustItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-text-dark);
   
-  @media (min-width: 768px) {
-    font-size: 0.9375rem;
-    gap: 10px;
+  .trust-text {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
   }
   
-  @media (min-width: 992px) {
-    font-size: 1rem;
-    gap: 12px;
+  .divider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color-text-light);
+    opacity: 0.5;
   }
 `;
 
