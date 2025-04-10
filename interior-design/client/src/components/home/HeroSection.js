@@ -173,39 +173,39 @@ const HeroContent = styled.div`
   
   .hero-text {
     text-align: left;
-    max-width: 650px;
+    max-width: 600px;
   }
   
   @media (min-width: 768px) {
-    padding-left: calc(var(--container-padding, 1.5rem) * 1.5);
-    width: 100%;
+    padding-left: calc(var(--container-padding, 1.5rem) * 1.25);
+    width: 95%;
     margin: 0;
+    
+    .hero-text {
+      max-width: 500px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    width: 55%;
+    padding-left: calc(var(--container-padding, 1.5rem) * 1.5);
+    
+    .hero-text {
+      max-width: 520px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    width: 50%;
     
     .hero-text {
       max-width: 550px;
     }
   }
   
-  @media (min-width: 992px) {
-    width: 60%;
-    padding-left: calc(var(--container-padding, 1.5rem) * 2);
-    
-    .hero-text {
-      max-width: 580px;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    width: 55%;
-    
-    .hero-text {
-      max-width: 600px;
-    }
-  }
-  
   @media (min-width: 1400px) {
-    width: 50%;
-    padding-left: calc(var(--container-padding, 1.5rem) * 2.5);
+    width: 45%;
+    padding-left: calc(var(--container-padding, 1.5rem) * 2);
   }
 `;
 
@@ -387,7 +387,7 @@ const HeroImageWrapper = styled.div`
   }
   
   @media (min-width: 992px) {
-    width: 65%; /* Image takes up part of the screen */
+    width: 60%; /* Reduced from 65% to create more space */
     top: 80px; /* Start lower, adjust based on final navbar height */
     height: calc(100% - 80px); /* Adjust height to fit */
   }
