@@ -146,15 +146,16 @@ const HeroWrapper = styled.section`
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 60px; /* Account for fixed header on small screens */
+  padding-top: 80px; /* Increased padding to prevent overlap with fixed header */
   
   @media (min-width: 768px) {
     min-height: 650px;
+    padding-top: 100px; /* Ensure proper spacing on larger screens */
   }
   
   @media (min-width: 992px) {
     min-height: 700px;
-    padding-top: 0;
+    padding-top: 120px; /* Maintain proper spacing on desktop */
   }
 `;
 
