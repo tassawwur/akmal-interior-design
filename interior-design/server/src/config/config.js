@@ -49,8 +49,8 @@ module.exports = {
   CACHE_CLEAR_CRON: process.env.CACHE_CLEAR_CRON || '0 */12 * * *', // Every 12 hours
   
   // Site settings
-  SITE_NAME: process.env.SITE_NAME || 'Akmal Interior Design',
-  SITE_URL: process.env.SITE_URL || 'https://akmalinteriors.com',
+  SITE_NAME: process.env.SITE_NAME || 'AanganLab Interior Design',
+  SITE_URL: process.env.SITE_URL || 'https://aanganlab.com',
   SITE_DESCRIPTION: process.env.SITE_DESCRIPTION || 'Pakistan\'s most distinguished interior design atelier, crafting environments of exceptional beauty and functionality.',
   
   // Rate limiting

@@ -1,5 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
-# Akmal - Pakistan's Elite Interior Design Atelier
+# AanganLab - Pakistan's Elite Interior Design Atelier
 # Allow all web crawlers
 User-agent: *
 Allow: /
@@ -13,4 +13,4 @@ Disallow: /private/*
 Crawl-delay: 10
 
 # Sitemap location
-Sitemap: https://akmal.com/sitemap.xml
+Sitemap: https://aanganlab.com/sitemap.xml

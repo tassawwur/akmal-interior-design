@@ -327,13 +327,13 @@ const Contact = () => {
           
           <FaqGrid>
             <FaqItem>
-              <h3>What distinguishes AKMAL's approach?</h3>
+              <h3>What distinguishes AANGANLAB's approach?</h3>
               <p>We combine unrivaled design expertise with bespoke craftsmanship to create environments of exceptional refinement. Our white-glove service ensures a seamless experience from concept to completion.</p>
             </FaqItem>
             
             <FaqItem>
               <h3>What investment should I anticipate?</h3>
-              <p>Each AKMAL project represents a bespoke creation, with investments tailored to your vision and specifications. Our exclusive clientele typically engages us for comprehensive transformations starting from ₨10M, with our signature residences and commercial environments commanding ₨30M+.</p>
+              <p>Each AANGANLAB project represents a bespoke creation, with investments tailored to your vision and specifications. Our exclusive clientele typically engages us for comprehensive transformations starting from ₨10M, with our signature residences and commercial environments commanding ₨30M+.</p>
             </FaqItem>
             
             <FaqItem>
@@ -343,7 +343,7 @@ const Contact = () => {
             
             <FaqItem>
               <h3>Do you offer remote design services?</h3>
-              <p>For our distinguished clients beyond Lahore, we offer our exclusive Remote Design Program, combining virtual consultations with on-site visits to deliver the AKMAL experience throughout Pakistan and internationally.</p>
+              <p>For our distinguished clients beyond Lahore, we offer our exclusive Remote Design Program, combining virtual consultations with on-site visits to deliver the AANGANLAB experience throughout Pakistan and internationally.</p>
             </FaqItem>
           </FaqGrid>
         </div>

@@ -12,7 +12,7 @@ const teamMembers = [
     name: 'Akmal Shah',
     role: 'Principal Designer & Founder',
     image: '/images/team/Akmal.png',
-    bio: 'With over 15 years of experience in interior design, Akmal has established himself as a leader in the industry. He founded "AkmalShah." in 2008 with a vision to create innovative and functional design solutions that elevate everyday living environments.',
+    bio: 'With over 15 years of experience in interior design, Akmal has established himself as a leader in the industry. He founded "AanganLab" in 2008 with a vision to create innovative and functional design solutions that elevate everyday living environments.',
     expertise: ['Residential Design', 'Space Planning', 'Project Management'],
     education: 'Master of Interior Design, London School of Design',
     featured: true,
@@ -161,7 +161,7 @@ const Team = () => {
         
         <TeamIntroduction>
           <IntroText>
-            <p>At AKMAL, we've assembled an exclusive cadre of Pakistan's most distinguished design talents—professionals whose creative vision and technical mastery have redefined the standards of interior excellence. Our team represents the pinnacle of expertise across residential, commercial, and hospitality design, with credentials from the world's most prestigious institutions and portfolios featuring landmark projects across the nation.</p>
+            <p>At AANGANLAB, we've assembled an exclusive cadre of Pakistan's most distinguished design talents—professionals whose creative vision and technical mastery have redefined the standards of interior excellence. Our team represents the pinnacle of expertise across residential, commercial, and hospitality design, with credentials from the world's most prestigious institutions and portfolios featuring landmark projects across the nation.</p>
             <p>Each member of our elite collective brings specialized expertise and uncompromising standards, allowing us to execute projects of exceptional complexity and refinement. From ultra-luxury residences to bespoke commercial environments, our team delivers an unrivaled blend of innovative design thinking, technical precision, and white-glove project management.</p>
           </IntroText>
           <IntroStats>

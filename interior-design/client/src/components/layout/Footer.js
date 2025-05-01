@@ -11,8 +11,8 @@ const Footer = () => {
         <FooterContent>
           <FooterBranding>
             <FooterLogo>
-              <span>Akmal</span>
-              <span className="accent">Shah</span>
+              <span>Aangan</span>
+              <span className="accent">Lab</span>
             </FooterLogo>
             <p>
               Pakistan's most distinguished interior design atelier, crafting environments of exceptional beauty and functionality for the nation's most discerning clientele. Uncompromising quality, visionary design, and flawless execution since 2008.
@@ -92,7 +92,7 @@ const Footer = () => {
         </NewsletterSection>
 
         <FooterBottom>
-          <p>&copy; {currentYear} AkmalShah. All rights reserved.</p>
+          <p>&copy; {currentYear} AanganLab. All rights reserved.</p>
           <FooterBottomLinks>
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-of-service">Terms of Service</Link>

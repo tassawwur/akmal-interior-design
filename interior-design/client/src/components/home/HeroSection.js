@@ -59,7 +59,7 @@ const HeroSection = () => {
           className="hero-text"
         >
           <HeroTagline>
-            <span className="tagline-text">AKMAL</span>
+            <span className="tagline-text">AANGANLAB</span>
             <TaglineSeparator className="tagline-separator">•</TaglineSeparator>
             <span className="tagline-text">Pakistan's Elite Interior Design Atelier</span>
           </HeroTagline>
@@ -123,7 +123,7 @@ const HeroSection = () => {
           />
           <HeroImage 
             src={HERO_IMAGE} 
-            alt="AKMAL. Interior Design" 
+            alt="AANGANLAB Interior Design" 
             loading="eager"
             fetchpriority="high"
           />

@@ -28,8 +28,8 @@ const Header = () => {
         <NavContainer>
           <Logo>
             <Link to="/">
-              <span>Akmal</span>
-              <span className="accent">Shah</span>
+              <span>Aangan</span>
+              <span className="accent">Lab</span>
             </Link>
           </Logo>
 

@@ -1,5 +1,5 @@
-// Service Worker for Akmal Interior Design
-const CACHE_NAME = 'akmal-cache-v1';
+// Service Worker for AanganLab Interior Design
+const CACHE_NAME = 'aanganlab-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',

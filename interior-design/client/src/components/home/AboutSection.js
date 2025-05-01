@@ -85,13 +85,13 @@ const AboutSection = () => {
               whileInView="show"
               viewport={{ once: true }}
             >
-              <SubHeading variants={fadeIn("up", 0.1)}>THE AKMAL LEGACY</SubHeading>
+              <SubHeading variants={fadeIn("up", 0.1)}>THE AANGANLAB LEGACY</SubHeading>
               <Heading variants={fadeIn("up", 0.2)}>
                 Crafting <span className="text-secondary">Extraordinary Environments</span> Since 2008
               </Heading>
               
               <Description variants={fadeIn("up", 0.3)}>
-                AKMAL stands as Pakistan's premier design authority, transcending conventional interior design to create immersive environments that reflect perfection and purpose. Our unrivaled mastery in design, bespoke craftsmanship, and meticulous project execution has established us as the definitive choice for the nation's elite residences, luxury hospitality venues, and prestigious corporate environments.
+                AANGANLAB stands as Pakistan's premier design authority, transcending conventional interior design to create immersive environments that reflect perfection and purpose. Our unrivaled mastery in design, bespoke craftsmanship, and meticulous project execution has established us as the definitive choice for the nation's elite residences, luxury hospitality venues, and prestigious corporate environments.
               </Description>
               
               <Features variants={fadeIn("up", 0.4)}>
