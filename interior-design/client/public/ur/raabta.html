@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="آنگن لیب - ہم سے رابطہ کریں" />
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <title>رابطہ - آنگن لیب</title>
+  <style>
+    :root {
+      --primary: #1a1a1a;
+      --secondary: #dca867;
+      --background: #ffffff;
+      --text: #333333;
+      --text-light: #777777;
+      --font-heading: 'Amiri', serif;
+      --font-body: 'Noto Nastaliq Urdu', serif;
+      --transition: all 0.3s ease;
+      --container-padding: 1.5rem;
+      --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    a:hover {
+      color: var(--secondary);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+    
+    /* Header Styles */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    .logo .accent {
+      color: var(--secondary);
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    
+    .nav-link {
+      font-size: 1.1rem;
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--secondary);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+      right: auto;
+      left: 0;
+    }
+    
+    .mobile-toggle {
+      display: none;
+      cursor: pointer;
+      width: 30px;
+      height: 25px;
+      position: relative;
+      z-index: 1001;
+    }
+    
+    .mobile-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-toggle span:nth-child(1) {
+      top: 0;
+    }
+    
+    .mobile-toggle span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .mobile-toggle span:nth-child(3) {
+      bottom: 0;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 150px 0 100px;
+      background-color: #f9f9f9;
+      position: relative;
+      text-align: center;
+    }
+    
+    .page-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .page-description {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      padding: 100px 0;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    
+    .contact-info h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-description {
+      color: var(--text-light);
+      margin-bottom: 2.5rem;
+    }
+    
+    .contact-details {
+      margin-bottom: 3rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+    
+    .contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(220, 168, 103, 0.1);
+      color: var(--secondary);
+      border-radius: 50%;
+      margin-top: 0.5rem;
+    }
+    
+    .contact-text {
+      flex: 1;
+    }
+    
+    .contact-text h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-text p, .contact-text a {
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+    
+    .contact-text a:hover {
+      color: var(--secondary);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    
+    .social-link:hover {
+      background-color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    /* Form Styles */
+    .contact-form {
+      background-color: white;
+      border-radius: 10px;
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .form-title {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(220, 168, 103, 0.1);
+    }
+    
+    textarea.form-control {
+      resize: vertical;
+      min-height: 150px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary);
+      color: white;
+    }
+    
+    /* Map Section */
+    .map-section {
+      padding: 0 0 100px;
+    }
+    
+    .map-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .map-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .map-title p {
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .map-container {
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      padding: 100px 0;
+      background-color: #f9f9f9;
+    }
+    
+    .faq-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .faq-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .faq-title p {
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .faq-item {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    
+    .faq-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .faq-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+    
+    .faq-item h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--secondary);
+    }
+    
+    .faq-item p {
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+    
+    /* Footer Styles */
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 5rem 0 2rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-branding p {
+      opacity: 0.8;
+      line-height: 1.8;
+    }
+    
+    .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-logo .accent {
+      color: var(--secondary);
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: var(--transition);
+    }
+    
+    .social-icon:hover {
+      background-color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    .footer-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
+    .footer-nav h4 {
+      position: relative;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-nav h4::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      width: 30px;
+      height: 2px;
+      background-color: var(--secondary);
+    }
+    
+    .footer-nav ul {
+      list-style: none;
+    }
+    
+    .footer-nav li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-nav a {
+      color: rgba(255, 255, 255, 0.8);
+      transition: var(--transition);
+    }
+    
+    .footer-nav a:hover {
+      color: var(--secondary);
+      padding-right: 5px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .contact-info-icon {
+      color: var(--secondary);
+      margin-top: 5px;
+    }
+    
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .copyright {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        padding: 100px 2rem 2rem;
+        gap: 1.5rem;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        z-index: 1000;
+      }
+      
+      .nav-menu.active {
+        right: 0;
+      }
+      
+      .mobile-toggle {
+        display: block;
+      }
+      
+      .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 9px);
+      }
+      
+      .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -7px);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 2.5rem;
+      }
+      
+      .contact-form {
+        padding: 2rem;
+      }
+      
+      .footer-nav {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <span>آنگن</span><span class="accent">لیب</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">ہوم</a></li>
+          <li><a href="khidmaat.html" class="nav-link">خدمات</a></li>
+          <li><a href="#" class="nav-link">پروجیکٹس</a></li>
+          <li><a href="#" class="nav-link">ٹیم</a></li>
+          <li><a href="#" class="nav-link">کلائنٹس</a></li>
+          <li><a href="#" class="nav-link">بلاگ</a></li>
+          <li><a href="raabta.html" class="nav-link active">رابطہ</a></li>
+        </ul>
+      </nav>
+      
+      <div class="mobile-toggle" id="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">ہم سے رابطہ کریں</h1>
+      <p class="page-description">اپنے خوابوں کو حقیقت میں بدلنے کے لیے ہم سے بات کریں۔ آج ہی ہماری ٹیم سے رابطہ کریں۔</p>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>آئیے بات کریں</h2>
+          <p class="contact-description">ہم آپ کے انٹیریر ڈیزائن کی ضروریات پر بات کرنے کے لیے تیار ہیں۔ آپ ہم سے ذیل میں دیے گئے طریقوں سے رابطہ کر سکتے ہیں یا ہماری لاہور دفتر میں تشریف لا سکتے ہیں۔</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h3>ہمارا دفتر</h3>
+                <p>رحمان اسٹریٹ نمبر ۱۰،بیڈن روڈ، لاہور ۵۴۰۰۰</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h3>فون نمبر</h3>
+                <a href="tel:+923156293975">۹۲-۳۱۵-۶۲۹۳۹۷۵+</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h3>ای میل پتہ</h3>
+                <a href="mailto:tassawwurhussain61@gmail.com">tassawwurhussain61@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h3>کام کے اوقات</h3>
+                <p>پیر-جمعہ: صبح ۹ بجے - شام ۶ بجے</p>
+                <p>ہفتہ: صبح ۹ بجے - دوپہر ۱ بجے</p>
+                <p>اتوار: بند</p>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3>ہمیں سوشل میڈیا پر فالو کریں</h3>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3 class="form-title">ہمیں پیغام بھیجیں</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">مکمل نام</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">ای میل</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">فون نمبر</label>
+              <input type="tel" id="phone" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="service" class="form-label">سروس کا انتخاب کریں</label>
+              <select id="service" class="form-control">
+                <option value="">سروس منتخب کریں</option>
+                <option value="interior-design">انٹیریر ڈیزائن</option>
+                <option value="architecture">آرکیٹیکچر</option>
+                <option value="renovation">مرمت و تجدید</option>
+                <option value="project-management">پراجیکٹ مینجمنٹ</option>
+                <option value="consultation">مشاورت</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">پیغام</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">پیغام بھیجیں</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-title">
+        <h2>ہمارا مقام</h2>
+        <p>آپ ہماری لاہور میں واقع اٹیلیر میں ملاقات کے لیے اپائنٹمنٹ بک کر سکتے ہیں۔</p>
+      </div>
+      
+      <div class="map-container">
+        <!-- Replace with actual Google Maps embed code for your location -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108869.11541997648!2d74.25337617772304!3d31.485389388053006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1690204495818!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-title">
+        <h2>عام سوالات</h2>
+        <p>ہمارے کلائنٹس اکثر یہ سوالات پوچھتے ہیں۔ آپ اپنے سوال کا جواب یہاں تلاش کر سکتے ہیں۔</p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>آپ کے ڈیزائن پروسیس کے کیا مراحل ہیں؟</h3>
+          <p>ہمارا ڈیزائن پروسیس ابتدائی مشاورت سے شروع ہوتا ہے، جہاں ہم آپ کے خوابوں، بجٹ اور ٹائم لائن کو سمجھتے ہیں۔ پھر ہم تصوراتی ڈیزائن، نمونے، مٹیریل سیلیکشن اور آخر میں پروجیکٹ کی تکمیل کی طرف بڑھتے ہیں۔</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>آپ کی خدمات کی لاگت کتنی ہے؟</h3>
+          <p>ہر پروجیکٹ منفرد ہوتا ہے اور ہمارے چارجز گھر کے سائز، سروسز کی حد اور مٹیریلز کے انتخاب پر منحصر ہوتے ہیں۔ ہم آپ کے بجٹ کے مطابق کام کرنے کے لیے مختلف پیکیج پیش کرتے ہیں۔</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>کیا آپ لاہور سے باہر بھی کام کرتے ہیں؟</h3>
+          <p>جی ہاں! ہم پورے پاکستان میں کام کرتے ہیں اور خصوصی پروجیکٹس کے لیے بین الاقوامی سطح پر بھی سفر کرتے ہیں۔ دور سے کام کرنے کے لیے ہمارے پاس ایک موثر پروسیس موجود ہے۔</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>ایک پروجیکٹ مکمل ہونے میں کتنا وقت لگتا ہے؟</h3>
+          <p>ٹائم لائن کا انحصار پروجیکٹ کے سائز اور پیچیدگی پر ہے۔ ایک چھوٹا سجاوٹی پروجیکٹ 4-6 ہفتے لے سکتا ہے، جبکہ ایک بڑی مرمت 3-6 ماہ یا اس سے زیادہ وقت لے سکتی ہے۔</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <span>آنگن</span><span class="accent">لیب</span>
+          </div>
+          <p>
+            پاکستان کی سب سے ممتاز انٹیریر ڈیزائن اٹیلیر، ملک کے سب سے متمیز گاہکوں کے لیے خوبصورتی اور عملی سہولت کے حامل ماحول تخلیق کرتی ہے۔ ۲۰۰۸ سے بے مثال معیار، نظریاتی ڈیزائن، اور بے داغ تکمیل۔
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-nav">
+          <div class="nav-column">
+            <h4>نیویگیشن</h4>
+            <ul>
+              <li><a href="index.html">ہوم</a></li>
+              <li><a href="khidmaat.html">خدمات</a></li>
+              <li><a href="#">پروجیکٹس</a></li>
+              <li><a href="#">ہمارے کلائنٹس</a></li>
+              <li><a href="#">بلاگ</a></li>
+              <li><a href="raabta.html">رابطہ</a></li>
+            </ul>
+          </div>
+          
+          <div class="nav-column">
+            <h4>خدمات</h4>
+            <ul>
+              <li><a href="#">انٹیریر ڈیزائن</a></li>
+              <li><a href="#">آرکیٹیکچر</a></li>
+              <li><a href="#">کنسٹرکشن</a></li>
+              <li><a href="#">پراجیکٹ مینجمنٹ</a></li>
+              <li><a href="#">مٹیریل سپلائی</a></li>
+              <li><a href="#">انجینئرنگ</a></li>
+            </ul>
+          </div>
+          
+          <div class="nav-column">
+            <h4>ہم سے رابطہ کریں</h4>
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-map-marker-alt"></i>
+                <span>رحمان اسٹریٹ نمبر ۱۰،بیڈن روڈ، لاہور ۵۴۰۰۰</span>
+              </div>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-phone-alt"></i>
+                <a href="tel:+923156293975">۹۲-۳۱۵-۶۲۹۳۹۷۵+</a>
+              </div>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-envelope"></i>
+                <a href="mailto:tassawwurhussain61@gmail.com">tassawwurhussain61@gmail.com</a>
+              </div>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-clock"></i>
+                <span>پیر-جمعہ: صبح ۹ بجے - شام ۶ بجے</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; ۲۰۲۳ آنگن لیب۔ تمام حقوق محفوظ ہیں۔</p>
+        <div class="footer-links">
+          <a href="#">رازداری پالیسی</a>
+          <a href="#">سروس کی شرائط</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileToggle.addEventListener('click', function() {
+      mobileToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      }
+    });
+    
+    // Form Submission
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Here you would normally handle the form submission with AJAX
+      // For now, just show a success message
+      alert('آپ کا پیغام بھیج دیا گیا ہے۔ ہم جلد ہی آپ سے رابطہ کریں گے۔');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html> 

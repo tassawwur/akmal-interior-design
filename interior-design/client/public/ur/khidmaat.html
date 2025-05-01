@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="آنگن لیب - پاکستان کی نخبہ انٹیریر ڈیزائن اٹیلیر" />
+  <meta name="description" content="آنگن لیب - ہماری خدمات دیکھیں" />
   <link rel="icon" href="../favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <title>آنگن لیب | پاکستان کی نمایاں انٹیریر ڈیزائن سروس</title>
+  <title>خدمات - آنگن لیب</title>
   <style>
     :root {
       --primary: #1a1a1a;
@@ -82,15 +82,9 @@
       right: 0;
       z-index: 1000;
       padding: 1.5rem 0;
-      background-color: transparent;
-      transition: all 0.3s ease;
-    }
-    
-    header.scrolled {
       background-color: rgba(255, 255, 255, 0.95);
-      padding: 1rem 0;
+      transition: all 0.3s ease;
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
     }
     
     .header-container {
@@ -169,242 +163,118 @@
     .mobile-toggle span:nth-child(3) {
       bottom: 0;
     }
-    
-    /* Hero Section Styles */
-    .hero {
-      height: 100vh;
-      min-height: 700px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding-top: 100px;
-      overflow: hidden;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      max-width: 600px;
-    }
-    
-    .hero-tagline {
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-bottom: 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .tagline-separator {
-      color: var(--secondary);
-      margin: 0 8px;
-    }
-    
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-    
-    .hero-description {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      font-weight: 600;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: var(--transition);
-      text-align: center;
-    }
-    
-    .btn-primary {
-      background-color: var(--primary);
-      color: white;
-    }
-    
-    .btn-primary:hover {
-      background-color: var(--secondary);
-      color: white;
-    }
-    
-    .btn-outline {
-      border: 2px solid var(--primary);
-      color: var(--primary);
-    }
-    
-    .btn-outline:hover {
-      background-color: var(--primary);
-      color: white;
-    }
-    
-    .trust-signals {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .trust-icon {
-      color: var(--secondary);
-      font-size: 1.2rem;
-    }
-    
-    .hero-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 55%;
-      height: 100%;
-      z-index: 1;
-    }
-    
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        to left,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 255, 255, 0.8) 30%,
-        rgba(255, 255, 255, 0.6) 60%,
-        rgba(255, 255, 255, 0.3) 100%
-      );
-      z-index: 5;
-    }
-    
-    /* About Section Styles */
-    .about {
-      padding: 120px 0;
+
+    /* Page Header */
+    .page-header {
+      padding: 150px 0 100px;
       background-color: #f9f9f9;
-    }
-    
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    
-    .about-images {
       position: relative;
-      height: 600px;
-    }
-    
-    .about-img-1 {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60%;
-      height: 60%;
-      z-index: 5;
-    }
-    
-    .about-img-1 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      box-shadow: var(--shadow-md);
-    }
-    
-    .about-img-2 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60%;
-      height: 60%;
-      z-index: 2;
-    }
-    
-    .about-img-2 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      box-shadow: var(--shadow-md);
-    }
-    
-    .experience-badge {
-      position: absolute;
-      top: 60%;
-      right: 45%;
-      transform: translate(50%, -50%);
-      background-color: var(--secondary);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      box-shadow: 0 10px 30px rgba(220, 168, 103, 0.3);
-    }
-    
-    .badge-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-    
-    .badge-text {
-      font-size: 0.75rem;
       text-align: center;
-      font-weight: 500;
     }
     
-    .about-content h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .about-subheading {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--secondary);
+    .page-title {
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
     
-    .about-features {
+    .page-description {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-light);
+    }
+    
+    .services-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 2rem 0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    
+    .service-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .service-image {
+      height: 250px;
+      overflow: hidden;
+    }
+    
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .service-card:hover .service-image img {
+      transform: scale(1.05);
+    }
+    
+    .service-content {
+      padding: 2rem;
+    }
+    
+    .service-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .service-content p {
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+    }
+    
+    .service-features {
+      margin-top: 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding-top: 1.5rem;
+    }
+    
+    .feature-list {
+      list-style: none;
     }
     
     .feature-item {
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      margin-bottom: 0.75rem;
     }
     
     .feature-icon {
       color: var(--secondary);
+      font-size: 0.8rem;
     }
     
     /* Footer Styles */
@@ -545,28 +415,30 @@
       color: var(--secondary);
     }
     
-    /* Media Queries */
-    @media (max-width: 1200px) {
-      .hero-title {
-        font-size: 3rem;
-      }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
     }
     
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary);
+      color: white;
+    }
+    
+    /* Media Queries */
     @media (max-width: 992px) {
-      .hero-content {
-        max-width: 100%;
-      }
-      
-      .hero-overlay {
-        background: rgba(255, 255, 255, 0.8);
-      }
-      
-      .about-container {
-        grid-template-columns: 1fr;
-      }
-      
-      .about-content {
-        order: -1;
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
       
       .footer-content {
@@ -608,36 +480,14 @@
       .mobile-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(4px, -7px);
       }
-      
-      .nav-link {
-        font-size: 1.25rem;
-      }
     }
     
     @media (max-width: 768px) {
-      .hero-title {
+      .page-title {
         font-size: 2.5rem;
       }
       
-      .hero-buttons {
-        flex-direction: column;
-      }
-      
-      .about-images {
-        height: 450px;
-      }
-      
-      .experience-badge {
-        width: 100px;
-        height: 100px;
-        padding: 1rem;
-      }
-      
-      .badge-number {
-        font-size: 2rem;
-      }
-      
-      .about-features {
+      .services-grid {
         grid-template-columns: 1fr;
       }
       
@@ -668,8 +518,8 @@
       
       <nav>
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="#" class="nav-link active">ہوم</a></li>
-          <li><a href="#" class="nav-link">خدمات</a></li>
+          <li><a href="index.html" class="nav-link">ہوم</a></li>
+          <li><a href="khidmaat.html" class="nav-link active">خدمات</a></li>
           <li><a href="#" class="nav-link">پروجیکٹس</a></li>
           <li><a href="#" class="nav-link">ٹیم</a></li>
           <li><a href="#" class="nav-link">کلائنٹس</a></li>
@@ -686,95 +536,212 @@
     </div>
   </header>
   
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Page Header -->
+  <section class="page-header">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-tagline">
-          <span>آنگن لیب</span>
-          <span class="tagline-separator">•</span>
-          <span>پاکستان کی نمایاں انٹیریر ڈیزائن اٹیلیر</span>
-        </div>
-        
-        <h1 class="hero-title">جگہوں کو شاہکار میں تبدیل کرنے کا فن</h1>
-        
-        <p class="hero-description">
-          جہاں نظریاتی ڈیزائن اور بے مثال کاریگری ایک ساتھ ملتے ہیں۔ ۱۵ سالوں سے، ہم پاکستان میں تمیز دار گاہکوں کی پہلی پسند ہیں، جو خوبصورت جگہوں کو جدید ترین ڈیزائن سے سجاتے ہیں۔
-        </p>
-        
-        <div class="hero-buttons">
-          <a href="#" class="btn btn-primary">اپنا خواب شروع کریں</a>
-          <a href="#" class="btn btn-outline">ہماری کامیابیاں دیکھیں</a>
-        </div>
-        
-        <div class="trust-signals">
-          <div class="trust-item">
-            <i class="trust-icon fas fa-award"></i>
-            <span>انعام یافتہ ڈیزائن</span>
-          </div>
-          <div class="trust-item">
-            <i class="trust-icon fas fa-gem"></i>
-            <span>معیاری خدمات</span>
-          </div>
-          <div class="trust-item">
-            <i class="trust-icon fas fa-certificate"></i>
-            <span>خصوصی سروس</span>
-          </div>
-        </div>
-      </div>
+      <h1 class="page-title">ہماری خدمات</h1>
+      <p class="page-description">آنگن لیب پاکستان میں نادر انٹیریر ڈیزائن سروسز پیش کرتی ہے، جو آپ کی جگہ کو شاندار اور عملی بناتی ہیں۔</p>
     </div>
-    
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="آنگن لیب انٹیریر ڈیزائن">
-    </div>
-    
-    <div class="hero-overlay"></div>
   </section>
   
-  <!-- About Section -->
-  <section class="about">
-    <div class="container about-container">
-      <div class="about-images">
-        <div class="about-img-1">
-          <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="جدید انٹیریر ڈیزائن">
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>آپ کی جگہ کے لیے جامع حل</h2>
+        <p>آنگن لیب ڈیزائن اور اجرائی خدمات کا ایک خصوصی مجموعہ پیش کرتی ہے، جو خاص طور پر غیر معمولی جگہوں کو تحفہ شاہکاروں میں بدلنے کے لیے تیار کیا گیا ہے۔</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="انٹیریر ڈیزائن">
+          </div>
+          <div class="service-content">
+            <h3>انٹیریر ڈیزائن</h3>
+            <p>کسی بھی جگہ کو خوبصورت، عملی اور آپ کی شخصیت کی عکاسی کرنے والا بنانے کے لیے ہماری مکمل ڈیزائن سروس۔</p>
+            <div class="service-features">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>مکمل تصوراتی ڈیزائن</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>مٹیریلز کا انتخاب</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>فرنیچر اور ایکسیسریز</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>لائٹنگ ڈیزائن</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="about-img-2">
-          <img src="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="خوبصورت جگہ ڈیزائن">
+        
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="آرکیٹیکچر">
+          </div>
+          <div class="service-content">
+            <h3>آرکیٹیکچر</h3>
+            <p>آپ کے خوابوں کو حقیقت میں بدلنے کے لیے ماہرانہ آرکیٹیکچرل ڈیزائن سروسز۔ ہر پراجیکٹ میں خوبصورتی، فنکشنیلٹی اور پائیداری کا توازن برقرار رکھا جاتا ہے۔</p>
+            <div class="service-features">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>تصوراتی ڈیزائن</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>عمارت کے منصوبے</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>3D ماڈلنگ</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>اجازت نامے کا عمل</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="experience-badge">
-          <span class="badge-number">۱۵</span>
-          <span class="badge-text">سال کی<br>کامیابی</span>
+        
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1523816572495-36def9ad7aac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="مرمت و تجدید">
+          </div>
+          <div class="service-content">
+            <h3>مرمت و تجدید</h3>
+            <p>موجودہ جگہوں کو متاثر کن طریقے سے تبدیل کریں۔ ہم آپ کی عمارت کے حالیہ روپ کو دوبارہ جان دے سکتے ہیں، کسی بھی سائز کے پراجیکٹ پر کام کرتے ہیں۔</p>
+            <div class="service-features">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>کمرشل مرمت</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>گھریلو تجدید</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>تاریخی بحالی</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>توسیع پروجیکٹس</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="فرنیچر ڈیزائن">
+          </div>
+          <div class="service-content">
+            <h3>مخصوص فرنیچر ڈیزائن</h3>
+            <p>کسٹم فرنیچر کے ساتھ اپنی جگہ کو منفرد بنائیں۔ ہمارا انوکھا فرنیچر آپ کی جگہ کے مطابق تیار کیا جاتا ہے تاکہ بہترین مناسبت اور خوبصورتی حاصل ہو سکے۔</p>
+            <div class="service-features">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>کسٹم ڈیزائن</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>ہینڈمیڈ کاریگری</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>اعلیٰ معیار کا مٹیریل</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>انسٹالیشن سروس</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=1087&q=80" alt="پراجیکٹ مینجمنٹ">
+          </div>
+          <div class="service-content">
+            <h3>پراجیکٹ مینجمنٹ</h3>
+            <p>اپنے پروجیکٹ کو ماہرانہ طریقے سے منظم کروائیں۔ ہم شروع سے آخر تک پورے عمل میں آپ کی رہنمائی کرتے ہیں، یہ یقینی بناتے ہوئے کہ ہر چیز وقت پر اور بجٹ کے اندر مکمل ہو۔</p>
+            <div class="service-features">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>ٹائم لائن مینجمنٹ</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>ٹھیکیدار نگرانی</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>باقاعدہ اپڈیٹس</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>معیاری یقین دہانی</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="سپیس پلاننگ">
+          </div>
+          <div class="service-content">
+            <h3>سپیس پلاننگ</h3>
+            <p>اپنی جگہ کی فنکشنیلٹی اور بہاؤ کو بڑھانے کے لیے ہماری ماہرانہ جگہ کی منصوبہ بندی کی خدمات حاصل کریں۔</p>
+            <div class="service-features">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>ڈیٹیلڈ فلور پلان</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>فرنیچر لے آؤٹ</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>ٹریفک فلو تجزیہ</span>
+                </li>
+                <li class="feature-item">
+                  <i class="feature-icon fas fa-check-circle"></i>
+                  <span>3D وژوئلائزیشن</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       
-      <div class="about-content">
-        <div class="about-subheading">آنگن لیب کی میراث</div>
-        <h2>۲۰۰۸ سے <span style="color: var(--secondary);">شاندار ماحول</span> تخلیق کرتے ہوئے</h2>
-        
-        <p>
-          آنگن لیب پاکستان کی معروف ڈیزائن اتھارٹی کے طور پر کھڑی ہے، روایتی انٹیریر ڈیزائن سے آگے بڑھ کر ایسے ماحول بناتی ہے جو کمال اور مقصد کی عکاسی کرتے ہیں۔ ہماری بے مثال ڈیزائن مہارت، مخصوص کاریگری، اور منصوبوں کی انتہائی باریک بینی سے تکمیل نے ہمیں ملک کے امیر ترین گھروں، لگژری مہمان نوازی کی جگہوں، اور معروف کارپوریٹ ماحول کے لیے پہلی پسند بنایا ہے۔
-        </p>
-        
-        <div class="about-features">
-          <div class="feature-item">
-            <i class="feature-icon fas fa-check"></i>
-            <span>مخصوص ڈیزائن حل</span>
-          </div>
-          <div class="feature-item">
-            <i class="feature-icon fas fa-check"></i>
-            <span>ماہرانہ کاریگری</span>
-          </div>
-          <div class="feature-item">
-            <i class="feature-icon fas fa-check"></i>
-            <span>نمونہ منصوبہ تکمیل</span>
-          </div>
-          <div class="feature-item">
-            <i class="feature-icon fas fa-check"></i>
-            <span>معیاری گاہک تجربہ</span>
-          </div>
-        </div>
-        
-        <a href="#" class="btn btn-primary">ہمارے بارے میں مزید جانیے</a>
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="#" class="btn btn-primary">مفت مشاورت بک کریں</a>
       </div>
     </div>
   </section>
@@ -802,8 +769,8 @@
           <div class="nav-column">
             <h4>نیویگیشن</h4>
             <ul>
-              <li><a href="#">ہوم</a></li>
-              <li><a href="#">خدمات</a></li>
+              <li><a href="index.html">ہوم</a></li>
+              <li><a href="khidmaat.html">خدمات</a></li>
               <li><a href="#">پروجیکٹس</a></li>
               <li><a href="#">ہمارے کلائنٹس</a></li>
               <li><a href="#">بلاگ</a></li>
@@ -858,16 +825,6 @@
   </footer>
   
   <script>
-    // Header Scroll Effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-    
     // Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
