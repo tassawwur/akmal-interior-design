@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="آنگن لیب - ہماری خدمات دیکھیں" />
+  <meta name="description" content="آنگن لیب - پاکستان کی نخبہ انٹیریر ڈیزائن اٹیلیر" />
   <link rel="icon" href="../favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -184,14 +184,14 @@
       color: var(--text-light);
     }
     
-    /* Services Section */
-    .services {
+    /* Services Grid Styles */
+    .services-section {
       padding: 100px 0;
     }
     
     .section-title {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 60px;
     }
     
     .section-title h2 {
@@ -207,9 +207,8 @@
     
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 4rem;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
     }
     
     .service-card {
@@ -234,7 +233,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: var(--transition);
     }
     
     .service-card:hover .service-image img {
@@ -242,39 +241,32 @@
     }
     
     .service-content {
-      padding: 2rem;
+      padding: 30px;
     }
     
     .service-content h3 {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 15px;
     }
     
     .service-content p {
-      margin-bottom: 1.5rem;
       color: var(--text-light);
+      margin-bottom: 20px;
     }
     
-    .service-features {
-      margin-top: 1.5rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
-      padding-top: 1.5rem;
-    }
-    
-    .feature-list {
-      list-style: none;
-    }
-    
-    .feature-item {
-      display: flex;
+    .service-link {
+      display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
+      gap: 10px;
+      font-weight: 600;
     }
     
-    .feature-icon {
-      color: var(--secondary);
-      font-size: 0.8rem;
+    .service-link i {
+      transition: var(--transition);
+    }
+    
+    .service-link:hover i {
+      transform: translateX(-5px);
     }
     
     /* Footer Styles */
@@ -376,13 +368,13 @@
       gap: 1rem;
     }
     
-    .contact-item {
+    .contact-info-item {
       display: flex;
       align-items: flex-start;
       gap: 1rem;
     }
     
-    .contact-icon {
+    .contact-info-icon {
       color: var(--secondary);
       margin-top: 5px;
     }
@@ -413,26 +405,6 @@
     
     .footer-links a:hover {
       color: var(--secondary);
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      font-weight: 600;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: var(--transition);
-      text-align: center;
-    }
-    
-    .btn-primary {
-      background-color: var(--primary);
-      color: white;
-    }
-    
-    .btn-primary:hover {
-      background-color: var(--secondary);
-      color: white;
     }
     
     /* Media Queries */
@@ -483,12 +455,12 @@
     }
     
     @media (max-width: 768px) {
-      .page-title {
-        font-size: 2.5rem;
-      }
-      
       .services-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .page-title {
+        font-size: 2.5rem;
       }
       
       .footer-nav {
@@ -540,208 +512,90 @@
   <section class="page-header">
     <div class="container">
       <h1 class="page-title">ہماری خدمات</h1>
-      <p class="page-description">آنگن لیب پاکستان میں نادر انٹیریر ڈیزائن سروسز پیش کرتی ہے، جو آپ کی جگہ کو شاندار اور عملی بناتی ہیں۔</p>
+      <p class="page-description">آنگن لیب آپ کے گھر یا دفتر کو بہترین جدید انداز میں ڈیزائن کرتی ہے۔ ہماری خدمات میں انٹیریر ڈیزائن، آرکیٹیکچر، کنسٹرکشن اور مزید شامل ہیں۔</p>
     </div>
   </section>
   
   <!-- Services Section -->
-  <section class="services">
+  <section class="services-section">
     <div class="container">
       <div class="section-title">
-        <h2>آپ کی جگہ کے لیے جامع حل</h2>
-        <p>آنگن لیب ڈیزائن اور اجرائی خدمات کا ایک خصوصی مجموعہ پیش کرتی ہے، جو خاص طور پر غیر معمولی جگہوں کو تحفہ شاہکاروں میں بدلنے کے لیے تیار کیا گیا ہے۔</p>
+        <h2>ہم کیا پیش کرتے ہیں</h2>
+        <p>ہم ہر طرح کی انٹیریر ڈیزائن اور آرکیٹیکچرل سروسز پیش کرتے ہیں، چاہے آپ کا پراجیکٹ چھوٹا ہو یا بڑا۔</p>
       </div>
       
       <div class="services-grid">
-        <!-- Service 1 -->
+        <!-- Service Card 1 -->
         <div class="service-card">
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="انٹیریر ڈیزائن">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1053&q=80" alt="انٹیریر ڈیزائن">
           </div>
           <div class="service-content">
             <h3>انٹیریر ڈیزائن</h3>
-            <p>کسی بھی جگہ کو خوبصورت، عملی اور آپ کی شخصیت کی عکاسی کرنے والا بنانے کے لیے ہماری مکمل ڈیزائن سروس۔</p>
-            <div class="service-features">
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>مکمل تصوراتی ڈیزائن</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>مٹیریلز کا انتخاب</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>فرنیچر اور ایکسیسریز</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>لائٹنگ ڈیزائن</span>
-                </li>
-              </ul>
-            </div>
+            <p>ہم آپ کے گھر یا دفتر کے لیے ایسے انٹیریرز ڈیزائن کرتے ہیں جو خوبصورتی، عملی سہولت اور آپ کے ذاتی انداز کا عکاس ہوں۔</p>
+            <a href="#" class="service-link">مزید جانیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
         
-        <!-- Service 2 -->
+        <!-- Service Card 2 -->
         <div class="service-card">
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="آرکیٹیکچر">
+            <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1084&q=80" alt="آرکیٹیکچر">
           </div>
           <div class="service-content">
             <h3>آرکیٹیکچر</h3>
-            <p>آپ کے خوابوں کو حقیقت میں بدلنے کے لیے ماہرانہ آرکیٹیکچرل ڈیزائن سروسز۔ ہر پراجیکٹ میں خوبصورتی، فنکشنیلٹی اور پائیداری کا توازن برقرار رکھا جاتا ہے۔</p>
-            <div class="service-features">
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>تصوراتی ڈیزائن</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>عمارت کے منصوبے</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>3D ماڈلنگ</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>اجازت نامے کا عمل</span>
-                </li>
-              </ul>
-            </div>
+            <p>مکانات، دفاتر اور کمرشل عمارتوں کے لیے جدید اور پائیدار ڈیزائن حل جو آپ کی ضروریات اور خوابوں کے مطابق بنائے جاتے ہیں۔</p>
+            <a href="#" class="service-link">مزید جانیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
         
-        <!-- Service 3 -->
+        <!-- Service Card 3 -->
         <div class="service-card">
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1523816572495-36def9ad7aac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="مرمت و تجدید">
+            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80" alt="کنسٹرکشن">
           </div>
           <div class="service-content">
-            <h3>مرمت و تجدید</h3>
-            <p>موجودہ جگہوں کو متاثر کن طریقے سے تبدیل کریں۔ ہم آپ کی عمارت کے حالیہ روپ کو دوبارہ جان دے سکتے ہیں، کسی بھی سائز کے پراجیکٹ پر کام کرتے ہیں۔</p>
-            <div class="service-features">
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>کمرشل مرمت</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>گھریلو تجدید</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>تاریخی بحالی</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>توسیع پروجیکٹس</span>
-                </li>
-              </ul>
-            </div>
+            <h3>کنسٹرکشن</h3>
+            <p>ہمارا ماہر کنسٹرکشن سٹاف آپ کے ڈیزائن کو حقیقت میں بدلنے کے لیے بہترین معیار کی تعمیر کی خدمات فراہم کرتا ہے۔</p>
+            <a href="#" class="service-link">مزید جانیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
         
-        <!-- Service 4 -->
+        <!-- Service Card 4 -->
         <div class="service-card">
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="فرنیچر ڈیزائن">
-          </div>
-          <div class="service-content">
-            <h3>مخصوص فرنیچر ڈیزائن</h3>
-            <p>کسٹم فرنیچر کے ساتھ اپنی جگہ کو منفرد بنائیں۔ ہمارا انوکھا فرنیچر آپ کی جگہ کے مطابق تیار کیا جاتا ہے تاکہ بہترین مناسبت اور خوبصورتی حاصل ہو سکے۔</p>
-            <div class="service-features">
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>کسٹم ڈیزائن</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>ہینڈمیڈ کاریگری</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>اعلیٰ معیار کا مٹیریل</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>انسٹالیشن سروس</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 5 -->
-        <div class="service-card">
-          <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=1087&q=80" alt="پراجیکٹ مینجمنٹ">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="پراجیکٹ مینجمنٹ">
           </div>
           <div class="service-content">
             <h3>پراجیکٹ مینجمنٹ</h3>
-            <p>اپنے پروجیکٹ کو ماہرانہ طریقے سے منظم کروائیں۔ ہم شروع سے آخر تک پورے عمل میں آپ کی رہنمائی کرتے ہیں، یہ یقینی بناتے ہوئے کہ ہر چیز وقت پر اور بجٹ کے اندر مکمل ہو۔</p>
-            <div class="service-features">
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>ٹائم لائن مینجمنٹ</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>ٹھیکیدار نگرانی</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>باقاعدہ اپڈیٹس</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>معیاری یقین دہانی</span>
-                </li>
-              </ul>
-            </div>
+            <p>ہمارے پراجیکٹ مینیجرز آپ کے منصوبے کو شروع سے آخر تک نگرانی کرتے ہیں تاکہ ہر چیز وقت پر اور بجٹ کے اندر مکمل ہو۔</p>
+            <a href="#" class="service-link">مزید جانیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
         
-        <!-- Service 6 -->
+        <!-- Service Card 5 -->
         <div class="service-card">
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="سپیس پلاننگ">
+            <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="مٹیریل سپلائی">
           </div>
           <div class="service-content">
-            <h3>سپیس پلاننگ</h3>
-            <p>اپنی جگہ کی فنکشنیلٹی اور بہاؤ کو بڑھانے کے لیے ہماری ماہرانہ جگہ کی منصوبہ بندی کی خدمات حاصل کریں۔</p>
-            <div class="service-features">
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>ڈیٹیلڈ فلور پلان</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>فرنیچر لے آؤٹ</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>ٹریفک فلو تجزیہ</span>
-                </li>
-                <li class="feature-item">
-                  <i class="feature-icon fas fa-check-circle"></i>
-                  <span>3D وژوئلائزیشن</span>
-                </li>
-              </ul>
-            </div>
+            <h3>مٹیریل سپلائی</h3>
+            <p>ہم فرنیچر، لائٹنگ، آرٹ ورک اور دیگر انٹیریر آئٹمز کی منتخب رینج فراہم کرتے ہیں جو آپ کے ڈیزائن کو مکمل کرنے میں مدد کرتے ہیں۔</p>
+            <a href="#" class="service-link">مزید جانیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
-      </div>
-      
-      <div style="text-align: center; margin-top: 4rem;">
-        <a href="raabta.html" class="btn btn-primary">مفت مشاورت بک کریں</a>
+        
+        <!-- Service Card 6 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1635340210388-dc8cacc2ba91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1026&q=80" alt="انجینئرنگ">
+          </div>
+          <div class="service-content">
+            <h3>انجینئرنگ</h3>
+            <p>ہماری انجینئرنگ ٹیم آپ کے منصوبے کے لیے سٹرکچرل، مکینیکل، الیکٹریکل اور پلمبنگ حل فراہم کرتی ہے۔</p>
+            <a href="#" class="service-link">مزید جانیں <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -793,20 +647,20 @@
           <div class="nav-column">
             <h4>ہم سے رابطہ کریں</h4>
             <div class="contact-info">
-              <div class="contact-item">
-                <i class="contact-icon fas fa-map-marker-alt"></i>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-map-marker-alt"></i>
                 <span>رحمان اسٹریٹ نمبر ۱۰،بیڈن روڈ، لاہور ۵۴۰۰۰</span>
               </div>
-              <div class="contact-item">
-                <i class="contact-icon fas fa-phone-alt"></i>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-phone-alt"></i>
                 <a href="tel:+923156293975">۹۲-۳۱۵-۶۲۹۳۹۷۵+</a>
               </div>
-              <div class="contact-item">
-                <i class="contact-icon fas fa-envelope"></i>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-envelope"></i>
                 <a href="mailto:tassawwurhussain61@gmail.com">tassawwurhussain61@gmail.com</a>
               </div>
-              <div class="contact-item">
-                <i class="contact-icon fas fa-clock"></i>
+              <div class="contact-info-item">
+                <i class="contact-info-icon fas fa-clock"></i>
                 <span>پیر-جمعہ: صبح ۹ بجے - شام ۶ بجے</span>
               </div>
             </div>
