@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta
+    name="description"
+    content="AanganLab - Pakistan's Elite Interior Design Atelier"
+  />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>AanganLab | Premium Interior Design</title>
+  <style>
+    :root {
+      --primary: #1a1a1a;
+      --secondary: #dca867;
+      --background: #ffffff;
+      --text: #333333;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .landing-container {
+      width: 100%;
+      max-width: 1400px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0.75) 100%
+      );
+      z-index: -1;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .logo {
+      margin-bottom: 3rem;
+    }
+    
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    
+    .logo-text span.accent {
+      color: var(--secondary);
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 4rem;
+      max-width: 600px;
+    }
+    
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 3rem;
+    }
+    
+    .language-btn {
+      display: block;
+      padding: 1.25rem 2rem;
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .language-btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: var(--primary);
+      transition: var(--transition);
+      z-index: -1;
+    }
+    
+    .language-btn:hover {
+      color: white;
+    }
+    
+    .language-btn:hover:before {
+      width: 100%;
+    }
+    
+    .english-btn {
+      border-color: var(--primary);
+    }
+    
+    .urdu-btn {
+      border-color: var(--secondary);
+      font-family: 'Noto Nastaliq Urdu', serif;
+      font-size: 1.4rem;
+    }
+    
+    .urdu-btn:before {
+      background-color: var(--secondary);
+    }
+    
+    .icon {
+      margin-right: 0.75rem;
+      font-size: 1.2rem;
+    }
+    
+    .urdu-btn .icon {
+      margin-right: 0;
+      margin-left: 0.75rem;
+      order: 2;
+    }
+
+    .watermark {
+      position: absolute;
+      bottom: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .buttons {
+        flex-direction: row;
+        gap: 2rem;
+      }
+      
+      .language-btn {
+        flex: 1;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .logo-text {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+      }
+      
+      .language-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+      
+      .urdu-btn {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="landing-container">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="logo">
+        <h1 class="logo-text">
+          <span>Aangan</span><span class="accent">Lab</span>
+        </h1>
+        <p class="tagline">Pakistan's Elite Interior Design Atelier - Crafting Extraordinary Environments Since 2008</p>
+      </div>
+      
+      <div class="buttons">
+        <a href="/en/index.html" class="language-btn english-btn">
+          <i class="icon fas fa-globe"></i>
+          See in English
+        </a>
+        <a href="/ur/index.html" class="language-btn urdu-btn">
+          اردو میں دیکھیں
+          <i class="icon fas fa-globe"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="watermark">
+      &copy; 2023 AanganLab. All Rights Reserved.
+    </div>
+  </div>
+</body>
+</html> 
