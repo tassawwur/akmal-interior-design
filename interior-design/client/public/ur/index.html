@@ -182,17 +182,20 @@
     }
     
     .hero-content {
-      position: relative;
+      position: absolute;
       z-index: 10;
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
     }
     
     .hero-text {
       max-width: 520px;
+      padding-right: var(--container-padding);
+      padding-left: var(--container-padding);
     }
     
     .hero-tagline {
@@ -841,6 +844,225 @@
         </div>
         
         <a href="#" class="btn btn-primary">ہمارے بارے میں مزید جانیے</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" style="padding: 120px 0; background-color: #fff;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 16px;">ہماری خدمات</h4>
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">ہم کیا پیش کرتے ہیں</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-light);">آنگن لیب میں، ہم انٹیریر ڈیزائن اور آرکیٹیکچر کی جامع خدمات پیش کرتے ہیں جو آپ کی جگہ کو بالکل آپ کے خوابوں کے مطابق تبدیل کردیں گی۔</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Service 1 -->
+        <div style="background-color: #f9f9f9; padding: 40px 30px; border-radius: 10px; transition: var(--transition);" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <div style="margin-bottom: 20px; height: 60px; width: 60px; border-radius: 50%; background-color: var(--secondary); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-paint-roller" style="color: white; font-size: 1.5rem;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 15px;">انٹیریر ڈیزائن</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">ہم آپ کی جگہوں کو زبردست فنکشنل اور خوبصورت ڈیزائن کے ساتھ تبدیل کرتے ہیں جو آپ کی شخصیت کی عکاسی کرتا ہے۔</p>
+          <a href="khidmaat.html" style="color: var(--secondary); display: flex; align-items: center; font-weight: 600;">
+            مزید معلومات
+            <i class="fas fa-long-arrow-alt-left" style="margin-right: 10px;"></i>
+          </a>
+        </div>
+        
+        <!-- Service 2 -->
+        <div style="background-color: #f9f9f9; padding: 40px 30px; border-radius: 10px; transition: var(--transition);" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <div style="margin-bottom: 20px; height: 60px; width: 60px; border-radius: 50%; background-color: var(--secondary); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-drafting-compass" style="color: white; font-size: 1.5rem;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 15px;">آرکیٹیکچر</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">ہماری آرکیٹیکچرل خدمات آپ کے خوابوں کو حقیقت میں بدلنے کے لیے جمالیات اور کارکردگی کا موازنہ فراہم کرتی ہیں۔</p>
+          <a href="khidmaat.html" style="color: var(--secondary); display: flex; align-items: center; font-weight: 600;">
+            مزید معلومات
+            <i class="fas fa-long-arrow-alt-left" style="margin-right: 10px;"></i>
+          </a>
+        </div>
+        
+        <!-- Service 3 -->
+        <div style="background-color: #f9f9f9; padding: 40px 30px; border-radius: 10px; transition: var(--transition);" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <div style="margin-bottom: 20px; height: 60px; width: 60px; border-radius: 50%; background-color: var(--secondary); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-tasks" style="color: white; font-size: 1.5rem;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 15px;">پروجیکٹ مینجمنٹ</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">ہم آپ کے پروجیکٹ کو ابتدا سے انجام تک نگرانی کرتے ہیں، یہ یقینی بناتے ہوئے کہ یہ بجٹ کے اندر اور وقت پر مکمل ہو۔</p>
+          <a href="khidmaat.html" style="color: var(--secondary); display: flex; align-items: center; font-weight: 600;">
+            مزید معلومات
+            <i class="fas fa-long-arrow-alt-left" style="margin-right: 10px;"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="khidmaat.html" class="btn btn-primary">تمام خدمات دیکھیں</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Showcase Section -->
+  <section style="padding: 120px 0; background-color: #f9f9f9;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 16px;">ہمارے کام</h4>
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">ہماری منتخب پروجیکٹس</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-light);">ہم نے پاکستان بھر میں مختلف طرز کے منصوبوں پر کام کیا ہے، جن میں گھر، دفاتر، ہوٹل، اور تجارتی جگہیں شامل ہیں۔</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Project 1 -->
+        <div style="position: relative; overflow: hidden; border-radius: 10px; height: 400px;">
+          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="لگژری گھر" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+          <div style="position: absolute; bottom: 0; right: 0; width: 100%; padding: 30px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); color: white; text-align: right;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 5px;">لاہور میں لگژری گھر</h3>
+            <p>رہائشی ڈیزائن</p>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div style="position: relative; overflow: hidden; border-radius: 10px; height: 400px;">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="ماڈرن آفس" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+          <div style="position: absolute; bottom: 0; right: 0; width: 100%; padding: 30px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); color: white; text-align: right;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 5px;">اسلام آباد میں کارپوریٹ دفتر</h3>
+            <p>کمرشل ڈیزائن</p>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div style="position: relative; overflow: hidden; border-radius: 10px; height: 400px;">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="بوٹیک ہوٹل" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+          <div style="position: absolute; bottom: 0; right: 0; width: 100%; padding: 30px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); color: white; text-align: right;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 5px;">کراچی میں بوٹیک ہوٹل</h3>
+            <p>ہوسپیٹیلٹی ڈیزائن</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="#" class="btn btn-outline">مزید پروجیکٹس دیکھیں</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section style="padding: 120px 0; background-color: #fff;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 16px;">کلائنٹس کی آراء</h4>
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">ہمارے خوش کلائنٹس کیا کہتے ہیں</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-light);">ہمارے کلائنٹس کی طرف سے ان کے تجربے کے بارے میں کچھ پیغامات۔ ہم اپنے کلائنٹس کی خوشی کو اپنی کامیابی کا معیار سمجھتے ہیں۔</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Testimonial 1 -->
+        <div style="background-color: #f9f9f9; padding: 40px; border-radius: 10px; box-shadow: var(--shadow-sm);">
+          <div style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 20px;">
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <p style="margin-bottom: 30px; color: var(--text-light);">آنگن لیب نے ہمارے گھر کو ایک حقیقی فن پارہ میں تبدیل کر دیا۔ ان کی توجہ اور سمجھ بے مثال تھی، اور نتیجہ ہماری توقعات سے بہت زیادہ تھا۔</p>
+          <div style="display: flex; align-items: center;">
+            <div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; margin-left: 15px;">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80" alt="عائشہ احمد" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 5px;">عائشہ احمد</h4>
+              <p style="color: var(--text-light); font-size: 0.9rem;">لاہور، پاکستان</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div style="background-color: #f9f9f9; padding: 40px; border-radius: 10px; box-shadow: var(--shadow-sm);">
+          <div style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 20px;">
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <p style="margin-bottom: 30px; color: var(--text-light);">میں نے آنگن لیب کو اپنے دفتر کی تزئین و آرائش کے لیے منتخب کیا تھا اور وہ بالکل میری خواہشات کے مطابق کام کرنے میں کامیاب رہے۔ حیرت انگیز خدمت!</p>
+          <div style="display: flex; align-items: center;">
+            <div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; margin-left: 15px;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80" alt="عمر فاروق" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 5px;">عمر فاروق</h4>
+              <p style="color: var(--text-light); font-size: 0.9rem;">کراچی، پاکستان</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div style="background-color: #f9f9f9; padding: 40px; border-radius: 10px; box-shadow: var(--shadow-sm);">
+          <div style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 20px;">
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <p style="margin-bottom: 30px; color: var(--text-light);">آنگن لیب نے ہمارے ہوٹل کی تعمیر نو میں بہترین کام کیا۔ انہوں نے ہمارے وژن کو سمجھا اور اسے ایک خوبصورت واقعیت میں تبدیل کر دیا۔</p>
+          <div style="display: flex; align-items: center;">
+            <div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; margin-left: 15px;">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=388&q=80" alt="فاطمہ علی" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 5px;">فاطمہ علی</h4>
+              <p style="color: var(--text-light); font-size: 0.9rem;">اسلام آباد، پاکستان</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section style="padding: 120px 0; background-color: #f9f9f9;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div>
+          <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 16px;">رابطہ کریں</h4>
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px;">آئیے اپنے خوابوں کو حقیقت میں بدلیں</h2>
+          <p style="margin-bottom: 30px; color: var(--text-light);">ہم آپ کی جگہ کو ایک خوبصورت اور فنکشنل ماحول میں تبدیل کرنے کے لیے تیار ہیں۔ آج ہی ہم سے رابطہ کریں اور اپنے منصوبے کے بارے میں بات کریں۔</p>
+          
+          <div style="margin-bottom: 30px;">
+            <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+              <div style="width: 50px; height: 50px; background-color: rgba(220, 168, 103, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: 15px;">
+                <i class="fas fa-map-marker-alt" style="color: var(--secondary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">ہمارا مقام</h4>
+                <p style="color: var(--text-light);">رحمان اسٹریٹ نمبر ۱۰،بیڈن روڈ، لاہور ۵۴۰۰۰</p>
+              </div>
+            </div>
+            
+            <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+              <div style="width: 50px; height: 50px; background-color: rgba(220, 168, 103, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: 15px;">
+                <i class="fas fa-envelope" style="color: var(--secondary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">ای میل ایڈریس</h4>
+                <a href="mailto:tassawwurhussain61@gmail.com" style="color: var(--text-light);">tassawwurhussain61@gmail.com</a>
+              </div>
+            </div>
+            
+            <div style="display: flex; align-items: flex-start;">
+              <div style="width: 50px; height: 50px; background-color: rgba(220, 168, 103, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: 15px;">
+                <i class="fas fa-phone-alt" style="color: var(--secondary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">فون نمبر</h4>
+                <a href="tel:+923156293975" style="color: var(--text-light);">۹۲-۳۱۵-۶۲۹۳۹۷۵+</a>
+              </div>
+            </div>
+          </div>
+          
+          <a href="raabta.html" class="btn btn-primary">ہم سے رابطہ کریں</a>
+        </div>
+        
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="انٹیریر ڈیزائن" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px; box-shadow: var(--shadow-md);">
+          <div style="position: absolute; top: -30px; right: -30px; background-color: var(--secondary); padding: 30px; border-radius: 10px; color: white; box-shadow: var(--shadow-md);">
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">مفت مشاورت</h3>
+            <p>اپنے منصوبے کی تفصیلات کے لیے آج ہی بات کریں</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
