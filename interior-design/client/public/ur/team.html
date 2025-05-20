@@ -40,52 +40,83 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="height: 60vh; min-height: 350px; background: linear-gradient(90deg, #fff 60%, #f9f9f9 100%); display: flex; align-items: center; justify-content: center;">
-    <div class="container" style="text-align: center;">
-      <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem;">ہماری ٹیم</h1>
-      <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">ہمارے تجربہ کار ڈیزائنرز، آرکیٹیکٹس، اور پراجیکٹ مینیجرز سے ملیں جو آپ کے وژن کو حقیقت بناتے ہیں۔</p>
+  <section class="hero team-hero">
+    <div class="container team-hero-container">
+      <h1 class="hero-title team-hero-title">ہماری ٹیم</h1>
+      <p class="team-hero-text">ہمارے تجربہ کار ڈیزائنرز، آرکیٹیکٹس، اور پراجیکٹ مینیجرز سے ملیں جو آپ کے وژن کو حقیقت بناتے ہیں۔</p>
     </div>
   </section>
 
   <!-- Team Grid Section -->
-  <section style="padding: 80px 0; background-color: #fff;">
+  <section class="team-grid-section">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+      <div class="team-grid">
         <!-- Team Member 1 -->
-        <div style="text-align: center; background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۱" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 5px solid var(--secondary);">
-          <h3 style="font-size: 1.4rem; margin-bottom: 5px;">احمد خان</h3>
-          <p style="color: var(--secondary); font-weight: 600; margin-bottom: 10px;">لیڈ آرکیٹیکٹ</p>
-          <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">۱۰ سال سے زائد کا تجربہ، جدید اور پائیدار ڈیزائن کے ماہر۔</p>
-          <div style="display: flex; justify-content: center; gap: 10px;">
-            <a href="#" style="color: var(--primary); font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" style="color: var(--primary); font-size: 1.2rem;"><i class="fas fa-envelope"></i></a>
+        <div class="team-member-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۱" class="team-member-image">
+          <h3 class="team-member-name">احمد خان</h3>
+          <p class="team-member-title">لیڈ آرکیٹیکٹ</p>
+          <p class="team-member-description">۱۰ سال سے زائد کا تجربہ، جدید اور پائیدار ڈیزائن کے ماہر۔</p>
+          <div class="team-member-socials">
+            <a href="#" class="team-member-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-member-social-link"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
         <!-- Team Member 2 -->
-        <div style="text-align: center; background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۲" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 5px solid var(--secondary);">
-          <h3 style="font-size: 1.4rem; margin-bottom: 5px;">سارہ علی</h3>
-          <p style="color: var(--secondary); font-weight: 600; margin-bottom: 10px;">سینئر انٹیریر ڈیزائنر</p>
-          <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">لگژری رہائشی منصوبوں میں مہارت، رنگوں اور بناوٹ کی ماہر۔</p>
-          <div style="display: flex; justify-content: center; gap: 10px;">
-            <a href="#" style="color: var(--primary); font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" style="color: var(--primary); font-size: 1.2rem;"><i class="fas fa-envelope"></i></a>
+        <div class="team-member-card">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۲" class="team-member-image">
+          <h3 class="team-member-name">سارہ علی</h3>
+          <p class="team-member-title">سینئر انٹیریر ڈیزائنر</p>
+          <p class="team-member-description">لگژری رہائشی منصوبوں میں مہارت، رنگوں اور بناوٹ کی ماہر۔</p>
+          <div class="team-member-socials">
+            <a href="#" class="team-member-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-member-social-link"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
         <!-- Team Member 3 -->
-        <div style="text-align: center; background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۳" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 5px solid var(--secondary);">
-          <h3 style="font-size: 1.4rem; margin-bottom: 5px;">بلال قریشی</h3>
-          <p style="color: var(--secondary); font-weight: 600; margin-bottom: 10px;">پراجیکٹ مینیجر</p>
-          <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px;">منصوبوں کی بروقت اور بجٹ کے اندر تکمیل کو یقینی بناتے۔</p>
-          <div style="display: flex; justify-content: center; gap: 10px;">
-            <a href="#" style="color: var(--primary); font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" style="color: var(--primary); font-size: 1.2rem;"><i class="fas fa-envelope"></i></a>
+        <div class="team-member-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۳" class="team-member-image">
+          <h3 class="team-member-name">بلال قریشی</h3>
+          <p class="team-member-title">پراجیکٹ مینیجر</p>
+          <p class="team-member-description">منصوبوں کی بروقت اور بجٹ کے اندر تکمیل کو یقینی بناتے۔</p>
+          <div class="team-member-socials">
+            <a href="#" class="team-member-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-member-social-link"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
-        <!-- Placeholder for more team members -->
-         <div style="display: flex; align-items: center; justify-content: center; background: #f0f0f0; border-radius: 10px; height: 300px; color: var(--text-light); font-size: 1.1rem; text-align: center; padding: 20px;">مزید ٹیم ممبران جلد شامل کیے جائیں گے…</div>
+        <!-- Team Member 4 -->
+        <div class="team-member-card">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۴" class="team-member-image">
+          <h3 class="team-member-name">عائشہ عمران</h3>
+          <p class="team-member-title">ہیڈ آف ڈیزائن</p>
+          <p class="team-member-description">۱۵ سال کا عالمی تجربہ، ہر اسپیس میں جدت اور فعالیت لاتی ہیں۔</p>
+          <div class="team-member-socials">
+            <a href="#" class="team-member-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-member-social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="team-member-card">
+          <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۵" class="team-member-image">
+          <h3 class="team-member-name">حسن جاوید</h3>
+          <p class="team-member-title">چیف آرکیٹیکٹ</p>
+          <p class="team-member-description">ماحول دوست اور ثقافتی طور پر حساس تعمیراتی ڈیزائن کے علمبردار۔</p>
+          <div class="team-member-socials">
+            <a href="#" class="team-member-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-member-social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="team-member-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ٹیم ممبر ۶" class="team-member-image">
+          <h3 class="team-member-name">مریم طارق</h3>
+          <p class="team-member-title">کلائنٹ ریلیشنز مینیجر</p>
+          <p class="team-member-description">کلائنٹس کے ساتھ مضبوط تعلقات استوار کرنے اور اطمینان کو یقینی بنانے کی ماہر۔</p>
+          <div class="team-member-socials">
+            <a href="#" class="team-member-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-member-social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

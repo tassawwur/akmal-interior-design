@@ -23,4 +23,18 @@ document.addEventListener('click', function(e) {
     navMenu.classList.remove('active');
     mobileToggle.classList.remove('active');
   }
-}); 
+});
+
+// Contact Form Submission (from raabta.html)
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) { // Check if the form exists on the current page
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Here you would normally handle the form submission with AJAX
+    // For now, just show a success message
+    alert('آپ کا پیغام بھیج دیا گیا ہے۔ ہم جلد ہی آپ سے رابطہ کریں گے۔');
+    contactForm.reset();
+  });
+} 

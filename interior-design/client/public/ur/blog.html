@@ -40,49 +40,120 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="height: 60vh; min-height: 350px; background: linear-gradient(90deg, #fff 60%, #f9f9f9 100%); display: flex; align-items: center; justify-content: center;">
-    <div class="container" style="text-align: center;">
-      <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem;">آنگن لیب بلاگ</h1>
-      <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">انٹیریر ڈیزائن کے تازہ ترین رجحانات، تجاویز، اور ہماری بصیرتیں دریافت کریں۔</p>
+  <section class="hero blog-hero">
+    <div class="container">
+      <h1 class="hero-title">آنگن لیب بلاگ</h1>
+      <p class="hero-description">انٹیریر ڈیزائن کے تازہ ترین رجحانات، تجاویز، اور ہماری بصیرتیں دریافت کریں۔</p>
     </div>
   </section>
 
   <!-- Blog Posts Section -->
-  <section style="padding: 80px 0; background-color: #fff;">
+  <section class="blog-posts-section">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+      <!-- Blog Search and Categories -->
+      <div class="blog-tools">
+        <div class="blog-search">
+          <input type="text" placeholder="بلاگ تلاش کریں..." class="blog-search-input">
+          <button class="blog-search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="blog-categories">
+          <h3>زمرے</h3>
+          <ul>
+            <li><a href="#" class="active">تمام</a></li>
+            <li><a href="#">ڈیزائن کے رجحانات</a></li>
+            <li><a href="#">تجاویز اور مشورے</a></li>
+            <li><a href="#">کیس اسٹڈی</a></li>
+            <li><a href="#">پائیدار ڈیزائن</a></li>
+            <li><a href="#">روشنی کا استعمال</a></li>
+            <li><a href="#">DIY آئیڈیاز</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="blog-newsletter">
+        <h3>ہمارے بلاگ کی تازہ ترین معلومات حاصل کریں</h3>
+        <p>ہمارے بلاگ کی تازہ ترین پوسٹس اور انٹیریر ڈیزائن کے رجحانات کے بارے میں معلومات حاصل کرنے کے لیے ہمارے نیوز لیٹر میں شامل ہوں۔</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="آپ کا ای میل ایڈریس" required>
+          <button type="submit">سبسکرائب کریں</button>
+        </form>
+      </div>
+
+      <div class="blog-posts-grid">
         <!-- Blog Post 1 -->
-        <div style="background: #f9f9f9; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1519642918688-7e43b19245d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۱" style="width: 100%; height: 250px; object-fit: cover;">
-          <div style="padding: 30px;">
-            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px;">۱۲ جون ۲۰۲۳ • ڈیزائن کے رجحانات</p>
-            <h3 style="font-size: 1.4rem; margin-bottom: 15px;">۲۰۲۳ میں پاکستانی گھروں کے لیے انٹیریر ڈیزائن کے ۵ اہم رجحانات</h3>
-            <p style="color: var(--text-light); margin-bottom: 20px;">جانیں کہ اس سال آپ کے گھر کو سجانے کے لیے کون سے رنگ، مواد اور انداز مقبول ہیں۔</p>
-            <a href="#" style="color: var(--secondary); font-weight: 600;">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
+        <div class="blog-post-card">
+          <img src="https://images.unsplash.com/photo-1519642918688-7e43b19245d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۱" class="blog-post-image">
+          <div class="blog-post-content">
+            <p class="blog-post-meta">۱۲ جون ۲۰۲۳ • ڈیزائن کے رجحانات</p>
+            <h3>۲۰۲۳ میں پاکستانی گھروں کے لیے انٹیریر ڈیزائن کے ۵ اہم رجحانات</h3>
+            <p class="blog-post-excerpt">جانیں کہ اس سال آپ کے گھر کو سجانے کے لیے کون سے رنگ، مواد اور انداز مقبول ہیں۔</p>
+            <a href="#" class="blog-post-readmore">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
         <!-- Blog Post 2 -->
-        <div style="background: #f9f9f9; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۲" style="width: 100%; height: 250px; object-fit: cover;">
-          <div style="padding: 30px;">
-            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px;">۵ جون ۲۰۲۳ • تجاویز اور مشورے</p>
-            <h3 style="font-size: 1.4rem; margin-bottom: 15px;">چھوٹے اپارٹمنٹس کو بڑا دکھانے کے لیے ۷ آسان طریقے</h3>
-            <p style="color: var(--text-light); margin-bottom: 20px;">کم جگہ سے زیادہ سے زیادہ فائدہ اٹھانے کے لیے عملی ڈیزائن کی حکمت عملی دریافت کریں۔</p>
-            <a href="#" style="color: var(--secondary); font-weight: 600;">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
+        <div class="blog-post-card">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۲" class="blog-post-image">
+          <div class="blog-post-content">
+            <p class="blog-post-meta">۵ جون ۲۰۲۳ • تجاویز اور مشورے</p>
+            <h3>چھوٹے اپارٹمنٹس کو بڑا دکھانے کے لیے ۷ آسان طریقے</h3>
+            <p class="blog-post-excerpt">کم جگہ سے زیادہ سے زیادہ فائدہ اٹھانے کے لیے عملی ڈیزائن کی حکمت عملی دریافت کریں۔</p>
+            <a href="#" class="blog-post-readmore">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
         <!-- Blog Post 3 -->
-        <div style="background: #f9f9f9; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۳" style="width: 100%; height: 250px; object-fit: cover;">
-          <div style="padding: 30px;">
-            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px;">۲۸ مئی ۲۰۲۳ • کیس اسٹڈی</p>
-            <h3 style="font-size: 1.4rem; margin-bottom: 15px;">لاہور میں ایک لگژری گھر کی تبدیلی: ایک کیس اسٹڈی</h3>
-            <p style="color: var(--text-light); margin-bottom: 20px;">دیکھیں کہ ہم نے کس طرح ایک پرانے گھر کو جدید اور شاندار رہائش گاہ میں تبدیل کیا۔</p>
-            <a href="#" style="color: var(--secondary); font-weight: 600;">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
+        <div class="blog-post-card">
+          <img src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۳" class="blog-post-image">
+          <div class="blog-post-content">
+            <p class="blog-post-meta">۲۸ مئی ۲۰۲۳ • کیس اسٹڈی</p>
+            <h3>لاہور میں ایک لگژری گھر کی تبدیلی: ایک کیس اسٹڈی</h3>
+            <p class="blog-post-excerpt">دیکھیں کہ ہم نے کس طرح ایک پرانے گھر کو جدید اور شاندار رہائش گاہ میں تبدیل کیا۔</p>
+            <a href="#" class="blog-post-readmore">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
-         <!-- Placeholder -->
-        <div style="display: flex; align-items: center; justify-content: center; background: #f0f0f0; border-radius: 10px; min-height: 400px; color: var(--text-light); font-size: 1.1rem; text-align: center; padding: 20px;">مزید بلاگ پوسٹس جلد آرہی ہیں…</div>
+        <!-- Blog Post 4 -->
+        <div class="blog-post-card">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۴" class="blog-post-image">
+          <div class="blog-post-content">
+            <p class="blog-post-meta">۲۰ مئی ۲۰۲۳ • پائیدار ڈیزائن</p>
+            <h3>گھر کی سجاوٹ میں پائیدار مواد کا استعمال: ماحول دوست انتخاب</h3>
+            <p class="blog-post-excerpt">اپنے گھر کو خوبصورت بنانے کے ساتھ ساتھ ماحول کا خیال رکھنے کے لیے پائیدار مواد کے بارے میں جانیں۔</p>
+            <a href="#" class="blog-post-readmore">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+        <!-- Blog Post 5 -->
+        <div class="blog-post-card">
+          <img src="https://images.unsplash.com/photo-1533090481720-856c6e7c6634?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۵" class="blog-post-image">
+          <div class="blog-post-content">
+            <p class="blog-post-meta">۱۵ مئی ۲۰۲۳ • روشنی کا استعمال</p>
+            <h3>اپنے گھر میں روشنی کا صحیح استعمال کیسے کریں؟</h3>
+            <p class="blog-post-excerpt">مختلف قسم کی روشنیوں اور ان کے اثرات کو سمجھ کر اپنے گھر کی فضا کو بہتر بنائیں۔</p>
+            <a href="#" class="blog-post-readmore">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+        <!-- Blog Post 6 -->
+        <div class="blog-post-card">
+          <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="بلاگ پوسٹ ۶" class="blog-post-image">
+          <div class="blog-post-content">
+            <p class="blog-post-meta">۱۰ مئی ۲۰۲۳ • DIY آئیڈیاز</p>
+            <h3>گھر کی سجاوٹ کے لیے آسان DIY آئیڈیاز</h3>
+            <p class="blog-post-excerpt">اپنے ہاتھوں سے گھر کو سجانے کے لیے چند آسان اور تخلیقی آئیڈیاز جو آپ خود کر سکتے ہیں۔</p>
+            <a href="#" class="blog-post-readmore">مزید پڑھیں <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="blog-pagination">
+        <a href="#" class="pagination-prev disabled"><i class="fas fa-chevron-right"></i> پچھلا</a>
+        <div class="pagination-numbers">
+          <a href="#" class="active">۱</a>
+          <a href="#">۲</a>
+          <a href="#">۳</a>
+          <span>...</span>
+          <a href="#">۱۰</a>
+        </div>
+        <a href="#" class="pagination-next">اگلا <i class="fas fa-chevron-left"></i></a>
       </div>
     </div>
   </section>

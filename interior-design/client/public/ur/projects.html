@@ -40,43 +40,65 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="height: 60vh; min-height: 350px; background: linear-gradient(90deg, #fff 60%, #f9f9f9 100%); display: flex; align-items: center; justify-content: center;">
-    <div class="container" style="text-align: center;">
-      <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem;">ہمارے پروجیکٹس</h1>
-      <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">آنگن لیب نے پاکستان بھر میں رہائشی، کمرشل اور ہوسپیٹیلٹی پروجیکٹس پر کام کیا ہے۔ یہاں ہماری کچھ نمایاں تخلیقات ملاحظہ کریں۔</p>
+  <section class="hero projects-hero">
+    <div class="container">
+      <h1 class="hero-title">ہمارے پروجیکٹس</h1>
+      <p class="hero-description">آنگن لیب نے پاکستان بھر میں رہائشی، کمرشل اور ہوسپیٹیلٹی پروجیکٹس پر کام کیا ہے۔ یہاں ہماری کچھ نمایاں تخلیقات ملاحظہ کریں۔</p>
     </div>
   </section>
 
   <!-- Projects Grid -->
-  <section style="padding: 80px 0; background-color: #fff;">
+  <section class="projects-grid-section">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+      <div class="projects-grid">
         <!-- Project 1 -->
-        <div style="position: relative; overflow: hidden; border-radius: 10px; height: 350px;">
-          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="لگژری گھر" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-          <div style="position: absolute; bottom: 0; right: 0; width: 100%; padding: 24px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); color: white; text-align: right;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">لاہور میں لگژری گھر</h3>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="لگژری گھر" class="project-card-image">
+          <div class="project-card-overlay">
+            <h3>لاہور میں لگژری گھر</h3>
             <p>رہائشی ڈیزائن</p>
           </div>
         </div>
         <!-- Project 2 -->
-        <div style="position: relative; overflow: hidden; border-radius: 10px; height: 350px;">
-          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="ماڈرن آفس" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-          <div style="position: absolute; bottom: 0; right: 0; width: 100%; padding: 24px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); color: white; text-align: right;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">اسلام آباد میں کارپوریٹ دفتر</h3>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="ماڈرن آفس" class="project-card-image">
+          <div class="project-card-overlay">
+            <h3>اسلام آباد میں کارپوریٹ دفتر</h3>
             <p>کمرشل ڈیزائن</p>
           </div>
         </div>
         <!-- Project 3 -->
-        <div style="position: relative; overflow: hidden; border-radius: 10px; height: 350px;">
-          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="بوٹیک ہوٹل" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-          <div style="position: absolute; bottom: 0; right: 0; width: 100%; padding: 24px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); color: white; text-align: right;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">کراچی میں بوٹیک ہوٹل</h3>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="بوٹیک ہوٹل" class="project-card-image">
+          <div class="project-card-overlay">
+            <h3>کراچی میں بوٹیک ہوٹل</h3>
             <p>ہوسپیٹیلٹی ڈیزائن</p>
           </div>
         </div>
-        <!-- Placeholder for more projects -->
-        <div style="display: flex; align-items: center; justify-content: center; background: #f9f9f9; border-radius: 10px; height: 350px; color: var(--text-light); font-size: 1.1rem;">مزید پروجیکٹس جلد شامل کیے جائیں گے…</div>
+        <!-- Project 4 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="فیصل آباد میں فارم ہاؤس" class="project-card-image">
+          <div class="project-card-overlay">
+            <h3>فیصل آباد میں وسیع و عریض فارم ہاؤس</h3>
+            <p>زمین کی تزئین و آرائش اور رہائشی ڈیزائن</p>
+          </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="جدید پینٹ ہاؤس" class="project-card-image">
+          <div class="project-card-overlay">
+            <h3>گلبرگ، لاہور میں جدید پینٹ ہاؤس</h3>
+            <p>معاصر رہائشی ڈیزائن</p>
+          </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="ریستوران ڈیزائن" class="project-card-image">
+          <div class="project-card-overlay">
+            <h3>ڈی ایچ اے، لاہور میں تھیمڈ ریستوران</h3>
+            <p>تجارتی و ہاسپیٹیلٹی ڈیزائن</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -28,7 +28,7 @@
           <li><a href="projects.html" class="nav-link">پروجیکٹس</a></li>
           <li><a href="team.html" class="nav-link">ٹیم</a></li>
           <li><a href="clients.html" class="nav-link">کلائنٹس</a></li>
-          <li><a href="#" class="nav-link">بلاگ</a></li>
+          <li><a href="blog.html" class="nav-link">بلاگ</a></li>
           <li><a href="raabta.html" class="nav-link active">رابطہ</a></li>
         </ul>
       </nav>
@@ -229,7 +229,7 @@
               <li><a href="projects.html">پروجیکٹس</a></li>
               <li><a href="team.html">ٹیم</a></li>
               <li><a href="clients.html">کلائنٹس</a></li>
-              <li><a href="#">بلاگ</a></li>
+              <li><a href="blog.html">بلاگ</a></li>
               <li><a href="raabta.html">رابطہ</a></li>
             </ul>
           </div>
@@ -280,35 +280,6 @@
     </div>
   </footer>
   
-  <script>
-    // Mobile Menu Toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    
-    mobileToggle.addEventListener('click', function() {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileToggle.classList.remove('active');
-      }
-    });
-    
-    // Form Submission
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Here you would normally handle the form submission with AJAX
-      // For now, just show a success message
-      alert('آپ کا پیغام بھیج دیا گیا ہے۔ ہم جلد ہی آپ سے رابطہ کریں گے۔');
-      contactForm.reset();
-    });
-  </script>
+  <script src="ur-script.js" defer></script>
 </body>
 </html> 
