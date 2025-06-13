@@ -750,11 +750,72 @@ footer {
 .client-logo:hover {
   filter: grayscale(0);
   opacity: 1;
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* New Client Logo Grid Styles */
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.client-logo-item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-logo-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.logo-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.client-logo-item .client-logo {
+  max-height: 80px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.client-logo-item:hover .client-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.client-details h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+}
+
+.client-details p {
+  font-family: var(--font-body);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0;
 }
 
 .testimonials-section {
-  padding: 80px 0;
-  background-color: #fff;
+  padding: 6rem 0;
+  background-color: var(--dark);
 }
 
 .testimonials-title {
@@ -805,21 +866,145 @@ footer {
 .author-name {
   margin: 0 0 3px 0;
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .author-title {
+  color: #ccc;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* Satisfaction Metrics Section */
+.satisfaction-section {
+  padding: 6rem 0;
+  background-color: var(--background);
+}
+
+.satisfaction-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--primary);
+}
+
+.satisfaction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.metric-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.metric-icon {
+  font-size: 3rem;
   color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.metric-value {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.metric-label {
+  font-family: var(--font-body);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* Case Studies Section */
+.case-studies-section {
+  padding: 6rem 0;
+}
+
+.case-studies-title, .case-studies-subtitle {
+  text-align: center;
+  color: var(--primary);
+}
+
+.case-studies-subtitle {
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  color: var(--text-light);
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.case-study-card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.case-study-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.case-study-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.case-study-card:hover .case-study-image {
+  transform: scale(1.1);
+}
+
+.case-study-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: #fff;
+}
+
+.case-study-client {
+  font-family: var(--font-body);
   font-size: 0.9rem;
+  font-weight: 500;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.case-study-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
   margin: 0;
 }
 
 .testimonial-placeholder {
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #f0f0f0;
-  border-radius: 10px;
   min-height: 250px; /* Use min-height instead of height */
   color: var(--text-light);
   font-size: 1.1rem;
@@ -1623,7 +1808,9 @@ textarea.form-control {
 }
 
 .project-card:hover .project-card-overlay {
-  /* Optional: make overlay more prominent on hover */
+  /* Make overlay more prominent on hover */
+  opacity: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 100%);
 }
 
 .project-card-overlay h3 {
