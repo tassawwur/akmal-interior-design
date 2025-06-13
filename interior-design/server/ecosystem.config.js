@@ -13,7 +13,8 @@ module.exports = {
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 5000
+        PORT: 5000,
+        MONGO_URI: "mongodb+srv://tassawwurhussain61:Bh7bgbbMJDv8Pu2a@interiordesigncluster.graa0.mongodb.net/?retryWrites=true&w=majority&appName=InteriorDesignCluster"
       },
       error_file: './logs/pm2-error.log',
       out_file: './logs/pm2-out.log',
