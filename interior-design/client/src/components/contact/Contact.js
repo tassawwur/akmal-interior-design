@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageTransition } from '../../utils/animations';
+import { submitContactForm } from '../../services/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -85,30 +86,43 @@ const Contact = () => {
     });
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send the form data to the backend
+      const response = await submitContactForm(formData);
       
-      setSubmitStatus({
-        submitted: true,
-        success: true,
-        message: 'Thank you! Your message has been received. We will contact you shortly.'
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: 'Interior Design',
-        message: ''
-      });
-      
-      setTimeout(() => {
+      if (response.success) {
         setSubmitStatus({
-          submitted: false,
-          success: false,
+          submitted: true,
+          success: true,
+          message: response.message || 'Thank you! Your message has been received. We will contact you shortly.'
+        });
+        
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: 'Interior Design',
           message: ''
         });
-      }, 5000);
+        
+        // Hide the success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus({
+            submitted: false,
+            success: false,
+            message: ''
+          });
+        }, 5000);
+      } else {
+        // Handle error from API
+        setSubmitStatus({
+          submitted: true,
+          success: false,
+          message: response.message || 'There was an error sending your message. Please try again later.'
+        });
+      }
     } catch (error) {
+      console.error('Contact form submission error:', error);
       setSubmitStatus({
         submitted: true,
         success: false,

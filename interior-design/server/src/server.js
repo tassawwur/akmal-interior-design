@@ -94,15 +94,9 @@ express_router.get('/', (req, res) => {
 });
 app.use('/api/blogs', express_router);
 
-// Create minimal Contact router for now
-const contactRouter = express.Router();
-contactRouter.post('/', (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: 'Contact form submission received. Full implementation coming soon.'
-  });
-});
-app.use('/api/contacts', contactRouter);
+// Contact routes
+const contactRoutes = require('./routes/contacts');
+app.use('/api/contacts', contactRoutes);
 
 // Upload routes
 const uploadRoutes = require('./routes/upload');
