@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "akmal-interior-design-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,8 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "vercel-build": "react-scripts build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -49,4 +48,4 @@
       "last 1 safari version"
     ]
   }
-}
+} 
