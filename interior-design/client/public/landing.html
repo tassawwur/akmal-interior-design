@@ -224,6 +224,22 @@
       }
     }
   </style>
+  <script>
+    // Function to handle language selection and redirect
+    function selectLanguage(language) {
+      // Set the language preference in session storage
+      sessionStorage.setItem('selectedLanguage', language);
+      sessionStorage.setItem('fromLanguageSelect', 'true');
+      
+      // Redirect to the appropriate page
+      if (language === 'ur') {
+        window.location.href = '/ur/';
+      } else {
+        window.location.href = '/';
+      }
+      return false;
+    }
+  </script>
 </head>
 <body>
   <div class="background"></div>
@@ -238,11 +254,11 @@
       </div>
       
       <div class="buttons">
-        <a href="/" class="language-btn english-btn">
+        <a href="javascript:void(0)" onclick="selectLanguage('en')" class="language-btn english-btn">
           <i class="icon fas fa-globe"></i>
           See in English
         </a>
-        <a href="/ur/index.html" class="language-btn urdu-btn">
+        <a href="javascript:void(0)" onclick="selectLanguage('ur')" class="language-btn urdu-btn">
           اردو میں دیکھیں
           <i class="icon fas fa-globe"></i>
         </a>

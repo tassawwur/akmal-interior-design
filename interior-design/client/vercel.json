@@ -1,19 +1,39 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
-  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "^/landing.html",
+      "dest": "/landing.html"
+    },
+    {
+      "src": "^/ur/(.*)",
+      "dest": "/ur/$1"
+    },
+    {
+      "src": "^/en/(.*)",
+      "dest": "/en/$1"
+    },
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "^/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "^/(manifest\\.json|favicon\\.ico|robots\\.txt|logo\\d+\\.png)",
       "dest": "/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
     }
   ]
 } 

@@ -14,6 +14,7 @@
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "mongoose": "^8.2.0",
+    "next": "^14.1.0",
     "nodemailer": "^6.9.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -28,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "vercel-build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
