@@ -96,7 +96,7 @@ async function sendEmail(options) {
   await transporter.sendMail(mailOptions);
 }
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // Only allow POST method
   if (req.method !== 'POST') {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
