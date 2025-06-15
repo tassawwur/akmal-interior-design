@@ -42,7 +42,8 @@ api.interceptors.response.use(
 // Contact form APIs
 export const submitContactForm = async (formData) => {
   try {
-    const response = await api.post('/contacts', formData);
+    // Use the Vercel API route directly instead of the Express backend
+    const response = await axios.post('/api/contacts', formData);
     return response.data;
   } catch (error) {
     return {
